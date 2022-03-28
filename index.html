@@ -10,11 +10,14 @@
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="apple-touch-icon" href="favicon.png">
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&display=swap');
         html,
         head,
         body {
             margin: 0px;
             padding: 0px;
+            background-color: black;
+            overflow-x: hidden;
         }
         header {
             position: fixed;
@@ -28,6 +31,9 @@
         #header-div{
             width: 100%;
             height: auto;
+            min-height: 36.69px;
+            max-height: 52.36px;
+            margin: 0px;
             border-bottom: 2px solid yellow;
         }
         #my-name {
@@ -52,7 +58,9 @@
         /* Nav tiles */
         .img-label {
             height: 80vh;
+            width: 30vw;
             background-color: silver;
+            border: 6px solid whitesmoke;
             text-decoration: none;
         }
         #nav-div img{
@@ -63,10 +71,53 @@
             text-decoration: none;
         }
         .tile-caption {
-            font-size: 1rem;
+            font-family: 'Josefin Sans', sans-serif;
+            padding-top: 40%;
+            font-size: 3rem;
             color: black;
-            justify-self: flex-end;
+            text-align: center;
         }
+
+        /* Footer styling */
+        #contact-info{
+            width: 100%;
+            height: auto;
+            border: 2px solid blueviolet;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+        .contact-img{
+            margin: 0 1vw;
+            height: 10vh;
+            width: auto;
+        }
+        
+        /* NARROW SCREEN RESPONSIVENESS */
+        @media (max-width: 1035px){
+            #nav-div{
+                flex-direction: column;
+                justify-content: space-around;
+                padding: 10px 20px 5px 20px;
+                align-items: center;
+            }
+            .img-label {
+                height: 80vh;
+                width: 80vw;
+                background-color: silver;
+                border: 6px solid whitesmoke;
+                text-decoration: none;
+        }
+            #nav-div img{
+                margin-top: 30px;
+                height: 70%;
+                width: 70%;
+        }
+        .tile-caption{
+            padding-top: 4px;
+            margin-bottom: 0px;
+        }
+    }
     </style>
 </head>
 
@@ -82,7 +133,7 @@
 
             <label class="img-label">
                 <a class="project-tile" href="https://codepen.io/crabbicles/pen/rNpMRwa" target="_blank">
-                    <img id="personal-projects-img"
+                    <img id="personal-projects-img" class="nav-img"
                         src="https://www.wolflair.com/wp-content/uploads/2017/01/placeholder.jpg" />
                     <p class="tile-caption">Personal Projects</p>
                 </a>
@@ -90,7 +141,7 @@
 
             <label id="creative-projects" class="img-label">
                 <a class="project-tile" href="https://codepen.io/crabbicles/pen/rNpMRwa" target="_blank">
-                    <img id="open-source-img"
+                    <img id="open-source-img" class="nav-img"
                         src="https://www.wolflair.com/wp-content/uploads/2017/01/placeholder.jpg" />
                     <p class="tile-caption">Open Source Contributions</p>
                 </a>
@@ -98,14 +149,23 @@
 
             <label class="img-label">
                 <a class="project-tile" href="https://codepen.io/crabbicles/pen/rNpMRwa" target="_blank">
-                    <img id="creative-projects-img"
+                    <img id="creative-projects-img" class="nav-img"
                         src="https://www.wolflair.com/wp-content/uploads/2017/01/placeholder.jpg" />
                     <p class="tile-caption">Creative Projects</p>
                 </a>
             </label>
-
         </div>
     </section>
+
+    <footer id="contact-info">
+        <a id="github-link" href="">
+            <img class="contact-img" src="GitHub-Mark-Light-120px-plus.png">
+        </a>
+        <a id="fcc-link" href="">
+            <img class="contact-img" src="https://d33wubrfki0l68.cloudfront.net/2f7693e1933ac514c960f51ceae72c91c6716eb2/b2efd/img/fcc_primary_small.svg">
+        </a>
+    </footer>
+
 </body>
 
 </html>

@@ -1,50 +1,111 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<style>
-    body{
-        background-color: black;
-    }
-    h1{
-        text-align: center;
-        margin-top: 10%;
-        font-size: 48px;
-        color:slateblue
-    }
+    <meta charset="utf-8">
+    <title>Web Portfolio: Evan Crabb</title>
 
-    #social-div{
-        text-align: center;
-        height: 110%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    #gitlogo{
-        height: 280px;
-        width: 280px;
-
+    <!-- Favicon stuff -->
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="apple-touch-icon" href="favicon.png">
+    <style>
+        html,
+        head,
+        body {
+            margin: 0px;
+            padding: 0px;
         }
-    #lil-text{
-        color: snow;
-        flex-basis: 100%;
-        margin: -10%;
-    }
+        header {
+            position: fixed;
+            height: auto;
+            width: 100%;
+            background-color: yellow;
+        }
+        body {
+            width: 100%;
+        }
+        #header-div{
+            width: 100%;
+            height: auto;
+            border-bottom: 2px solid yellow;
+        }
+        #my-name {
+            margin: 2vh 0px 0px 5px;
+            font-size: 1.8rem;
+            font-family: monospace;
+        }
 
-</style>
-
-<link rel="icon" type="image/png" href="favicon.png">
-<link rel="icon" type="image/svg+xml" href="favicon.svg">
-<link rel="apple-touch-icon" href="favicon.png">
+        /* nav display styling */
+        #main-section{
+            width: 100%;
+            height: auto;
+        }
+        #nav-div {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            margin: 0px;
+            padding: 25px;
+            text-align: center;
+        }
+        /* Nav tiles */
+        .img-label {
+            height: 80vh;
+            background-color: silver;
+            text-decoration: none;
+        }
+        #nav-div img{
+            height: 100px;
+            width: 100px;
+        }
+        .project-tile {
+            text-decoration: none;
+        }
+        .tile-caption {
+            font-size: 1rem;
+            color: black;
+            justify-self: flex-end;
+        }
+    </style>
 </head>
 
 <body>
-    <h1>Coming Soon!</h1>
-    <div id='social-div'>
-        <a href="https://github.com/Crabbicles">
-        <img id='gitlogo' src="GitHub-Mark.png" alt='GitHub logo to promote personal github account'>
-        <p id='lil-text'>Click Me!</p>
-        </a>
+    <div id="header-div">
+        <header id="header">
+            <h1 id="my-name">EvanCrabb.dev</h1>
+        </header>
     </div>
+
+    <section id="main-section">
+        <div id="nav-div">
+
+            <label class="img-label">
+                <a class="project-tile" href="https://codepen.io/crabbicles/pen/rNpMRwa" target="_blank">
+                    <img id="personal-projects-img"
+                        src="https://www.wolflair.com/wp-content/uploads/2017/01/placeholder.jpg" />
+                    <p class="tile-caption">Personal Projects</p>
+                </a>
+            </label>
+
+            <label id="creative-projects" class="img-label">
+                <a class="project-tile" href="https://codepen.io/crabbicles/pen/rNpMRwa" target="_blank">
+                    <img id="open-source-img"
+                        src="https://www.wolflair.com/wp-content/uploads/2017/01/placeholder.jpg" />
+                    <p class="tile-caption">Open Source Contributions</p>
+                </a>
+            </label>
+
+            <label class="img-label">
+                <a class="project-tile" href="https://codepen.io/crabbicles/pen/rNpMRwa" target="_blank">
+                    <img id="creative-projects-img"
+                        src="https://www.wolflair.com/wp-content/uploads/2017/01/placeholder.jpg" />
+                    <p class="tile-caption">Creative Projects</p>
+                </a>
+            </label>
+
+        </div>
+    </section>
 </body>
 
 </html>

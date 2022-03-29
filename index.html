@@ -11,6 +11,7 @@
     <link rel="apple-touch-icon" href="favicon.png">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&display=swap');
+
         html,
         head,
         body {
@@ -19,16 +20,19 @@
             background-color: black;
             overflow-x: hidden;
         }
+
         header {
             position: fixed;
             height: auto;
             width: 100%;
             background-color: yellow;
         }
+
         body {
             width: 100%;
         }
-        #header-div{
+
+        #header-div {
             width: 100%;
             height: auto;
             min-height: 36.69px;
@@ -36,6 +40,7 @@
             margin: 0px;
             border-bottom: 2px solid yellow;
         }
+
         #my-name {
             margin: 2vh 0px 0px 5px;
             font-size: 1.8rem;
@@ -43,10 +48,11 @@
         }
 
         /* nav display styling */
-        #main-section{
+        #main-section {
             width: 100%;
             height: auto;
         }
+
         #nav-div {
             display: flex;
             flex-direction: row;
@@ -55,6 +61,7 @@
             padding: 25px;
             text-align: center;
         }
+
         /* Nav tiles */
         .img-label {
             height: 80vh;
@@ -63,13 +70,17 @@
             border: 6px solid whitesmoke;
             text-decoration: none;
         }
-        #nav-div img{
-            height: 100px;
-            width: 100px;
+
+        #nav-div img {
+            padding-top: 25px;
+            height: 300px;
+            width: 300px;
         }
+
         .project-tile {
             text-decoration: none;
         }
+
         .tile-caption {
             font-family: 'Josefin Sans', sans-serif;
             padding-top: 40%;
@@ -79,45 +90,80 @@
         }
 
         /* Footer styling */
-        #contact-info{
+        #contact-info {
             width: 100%;
             height: auto;
-            border: 2px solid blueviolet;
             display: flex;
             flex-direction: row;
             justify-content: center;
         }
-        .contact-img{
+
+        .contact-img {
             margin: 0 1vw;
             height: 10vh;
             width: auto;
         }
-        
+
         /* NARROW SCREEN RESPONSIVENESS */
-        @media (max-width: 1035px){
-            #nav-div{
+        @media (max-width: 1035px) {
+            #header-div {
+                max-height: 30vh;
+            }
+
+            #my-name {
+                font-size: 3rem;
+            }
+
+            #nav-div {
                 flex-direction: column;
                 justify-content: space-around;
                 padding: 10px 20px 5px 20px;
                 align-items: center;
             }
+
             .img-label {
-                height: 80vh;
+                height: 30%;
                 width: 80vw;
                 background-color: silver;
-                border: 6px solid whitesmoke;
+                border: none;
                 text-decoration: none;
-        }
-            #nav-div img{
+            }
+
+            #nav-div img {
                 margin-top: 30px;
-                height: 70%;
-                width: 70%;
+                height: 40vw;
+                width: 40vw;
+            }
+
+            .tile-caption {
+                padding-top: 4px;
+                margin-bottom: 0px;
+            }
+
+            #contact-info {
+                position: absolute;
+            }
+
+            .contact-img {
+                padding-top: 5vh;
+                width: auto;
+                height: 10vh;
+            }
         }
-        .tile-caption{
-            padding-top: 4px;
-            margin-bottom: 0px;
+
+        /* Super narrow screen responsiveness (no idea if this is actually working or not) */
+        @media (max-width: 380px) {
+            .img-label{
+                height: 20%;
+            }
+            #nav-div img{
+                height: 35vw;
+                width: 35vw;
+            }
+            .tile-caption{
+                font-size: 1.5rem;
+            }
         }
-    }
     </style>
 </head>
 
@@ -130,7 +176,7 @@
 
     <section id="main-section">
         <div id="nav-div">
-
+            <!-- Personal projects section -->
             <label class="img-label">
                 <a class="project-tile" href="https://codepen.io/crabbicles/pen/rNpMRwa" target="_blank">
                     <img id="personal-projects-img" class="nav-img"
@@ -138,7 +184,7 @@
                     <p class="tile-caption">Personal Projects</p>
                 </a>
             </label>
-
+            <!-- Open source contributions section -->
             <label id="creative-projects" class="img-label">
                 <a class="project-tile" href="https://codepen.io/crabbicles/pen/rNpMRwa" target="_blank">
                     <img id="open-source-img" class="nav-img"
@@ -146,7 +192,7 @@
                     <p class="tile-caption">Open Source Contributions</p>
                 </a>
             </label>
-
+            <!-- Creative projects section -->
             <label class="img-label">
                 <a class="project-tile" href="https://codepen.io/crabbicles/pen/rNpMRwa" target="_blank">
                     <img id="creative-projects-img" class="nav-img"
@@ -158,11 +204,19 @@
     </section>
 
     <footer id="contact-info">
-        <a id="github-link" href="">
+        <!-- GitHub contact icon -->
+        <a id="github-link" href="https://github.com/Crabbicles">
             <img class="contact-img" src="GitHub-Mark-Light-120px-plus.png">
         </a>
-        <a id="fcc-link" href="">
-            <img class="contact-img" src="https://d33wubrfki0l68.cloudfront.net/2f7693e1933ac514c960f51ceae72c91c6716eb2/b2efd/img/fcc_primary_small.svg">
+        <!-- FCC contact icon -->
+        <a id="fcc-link" href="https://www.freecodecamp.org/Crabbicles">
+            <img class="contact-img"
+                src="https://d33wubrfki0l68.cloudfront.net/2f7693e1933ac514c960f51ceae72c91c6716eb2/b2efd/img/fcc_primary_small.svg">
+        </a>
+        <!-- LinkedIn contact icon -->
+        <a id="linked-in-link" href="https://www.linkedin.com/in/evancrabb/">
+            <img class="contact-img"
+                src="https://bankimooncentre.org/wp-content/uploads/2020/05/LinkedIn-Icon-Square.png">
         </a>
     </footer>
 

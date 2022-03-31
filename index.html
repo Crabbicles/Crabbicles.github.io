@@ -11,7 +11,7 @@
     <link rel="apple-touch-icon" href="favicon.png">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&display=swap');
-
+        @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,800;1,700&display=swap');
         html,
         head,
         body {
@@ -25,7 +25,8 @@
             position: fixed;
             height: auto;
             width: 100%;
-            background-color: yellow;
+            background-color: rgb(226, 123, 255);
+            
         }
 
         body {
@@ -44,7 +45,8 @@
         #my-name {
             margin: 2vh 0px 0px 5px;
             font-size: 1.8rem;
-            font-family: monospace;
+            font-family: 'Source Code Pro', monospace;
+            font-weight: 800;
         }
 
         /* nav display styling */
@@ -125,7 +127,10 @@
                 height: 30%;
                 width: 80vw;
                 background-color: silver;
-                border: none;
+                border-left: 6px solid white;
+                border-right: 6px solid white;
+                border-top: none;
+                border-bottom: none;
                 text-decoration: none;
             }
 
@@ -133,6 +138,7 @@
                 margin-top: 30px;
                 height: 40vw;
                 width: 40vw;
+                
             }
 
             .tile-caption {
@@ -155,6 +161,8 @@
         @media (max-width: 380px) {
             .img-label{
                 height: 20%;
+                border-left: 4px solid white;
+                border-right: 4px solid white;
             }
             #nav-div img{
                 height: 35vw;

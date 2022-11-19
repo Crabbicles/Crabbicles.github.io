@@ -1,233 +1,112 @@
 <!DOCTYPE html>
-<html>
-
 <head>
-    <meta charset="utf-8">
     <title>Web Portfolio: Evan Crabb</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link type="text/css" rel="stylesheet" href="css/stylesheet.css">
 
-    <!-- Favicon stuff -->
-    <link rel="icon" type="image/png" href="favicon.png">
-    <link rel="icon" type="image/svg+xml" href="favicon.svg">
-    <link rel="apple-touch-icon" href="favicon.png">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,800;1,700&display=swap');
-        html,
-        head,
-        body {
+        /* CSS magic */
+        head{
             margin: 0px;
-            padding: 0px;
-            background-color: black;
-            overflow-x: hidden;
         }
-
-        header {
-            position: fixed;
-            height: auto;
-            width: 100%;
-            background-color: rgb(226, 123, 255);
-            
-        }
-
-        body {
-            width: 100%;
-        }
-
-        #header-div {
-            width: 100%;
-            height: auto;
-            min-height: 36.69px;
-            max-height: 52.36px;
-            margin: 0px;
-            border-bottom: 2px solid yellow;
-        }
-
-        #my-name {
-            margin: 2vh 0px 0px 5px;
-            font-size: 1.8rem;
-            font-family: 'Source Code Pro', monospace;
-            font-weight: 800;
-        }
-
-        /* nav display styling */
-        #main-section {
-            width: 100%;
-            height: auto;
-        }
-
-        #nav-div {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-around;
-            margin: 0px;
-            padding: 25px;
-            text-align: center;
-        }
-
-        /* Nav tiles */
-        .img-label {
-            height: 80vh;
-            width: 30vw;
-            background-color: silver;
-            border: 6px solid whitesmoke;
-            text-decoration: none;
-        }
-
-        #nav-div img {
-            padding-top: 25px;
-            height: 300px;
-            width: 300px;
-        }
-
-        .project-tile {
-            text-decoration: none;
-        }
-
-        .tile-caption {
-            font-family: 'Josefin Sans', sans-serif;
-            padding-top: 40%;
-            font-size: 3rem;
-            color: black;
-            text-align: center;
-        }
-
-        /* Footer styling */
-        #contact-info {
-            width: 100%;
-            height: auto;
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-        }
-
-        .contact-img {
-            margin: 0 1vw;
-            height: 10vh;
-            width: auto;
-        }
-
-        /* NARROW SCREEN RESPONSIVENESS */
-        @media (max-width: 1035px) {
-            #header-div {
-                max-height: 30vh;
+        *, *:before, *:after {
+                box-sizing: border-box;
             }
-
-            #my-name {
-                font-size: 3rem;
-            }
-
-            #nav-div {
-                flex-direction: column;
-                justify-content: space-around;
-                padding: 10px 20px 5px 20px;
-                align-items: center;
-            }
-
-            .img-label {
-                height: 30%;
-                width: 80vw;
-                background-color: silver;
-                border-left: 6px solid white;
-                border-right: 6px solid white;
-                border-top: none;
-                border-bottom: none;
-                text-decoration: none;
-            }
-
-            #nav-div img {
-                margin-top: 30px;
-                height: 40vw;
-                width: 40vw;
-                
-            }
-
-            .tile-caption {
-                padding-top: 4px;
-                margin-bottom: 0px;
-            }
-
-            #contact-info {
-                position: absolute;
-            }
-
-            .contact-img {
-                padding-top: 5vh;
-                width: auto;
-                height: 10vh;
-            }
-        }
-
-        /* Super narrow screen responsiveness (no idea if this is actually working or not) */
-        @media (max-width: 380px) {
-            .img-label{
-                height: 20%;
-                border-left: 4px solid white;
-                border-right: 4px solid white;
-            }
-            #nav-div img{
-                height: 35vw;
-                width: 35vw;
-            }
-            .tile-caption{
-                font-size: 1.5rem;
-            }
-        }
     </style>
 </head>
 
 <body>
-    <div id="header-div">
-        <header id="header">
-            <h1 id="my-name">EvanCrabb.dev</h1>
-        </header>
-    </div>
+    <!-- Navbar -->
+    <nav id="nav" class="w3-sidebar w3-card w3-animate-left w3-bar-block" style="width: 13%;">
+        <img id="nav-img" src="favicon.png">
+        <a href="#About" class="w3-bar-item w3-button w3-mobile">About</a>
+        <a href="#Python" class="w3-bar-item w3-button w3-mobile">Python</a>
+        <a href="#Skills" class="w3-bar-item w3-button w3-mobile">Skills</a>
+        <a href="#Contact" class="w3-bar-item w3-button w3-mobile">Contact</a>
+    </nav>
 
-    <section id="main-section">
-        <div id="nav-div">
-            <!-- Personal projects section -->
-            <label class="img-label">
-                <a class="project-tile" href="https://codepen.io/crabbicles/pen/rNpMRwa" target="_blank">
-                    <img id="personal-projects-img" class="nav-img"
-                        src="https://www.wolflair.com/wp-content/uploads/2017/01/placeholder.jpg" />
-                    <p class="tile-caption">Personal Projects</p>
-                </a>
-            </label>
-            <!-- Open source contributions section -->
-            <label id="creative-projects" class="img-label">
-                <a class="project-tile" href="https://codepen.io/crabbicles/pen/rNpMRwa" target="_blank">
-                    <img id="open-source-img" class="nav-img"
-                        src="https://www.wolflair.com/wp-content/uploads/2017/01/placeholder.jpg" />
-                    <p class="tile-caption">Open Source Contributions</p>
-                </a>
-            </label>
-            <!-- Creative projects section -->
-            <label class="img-label">
-                <a class="project-tile" href="https://codepen.io/crabbicles/pen/rNpMRwa" target="_blank">
-                    <img id="creative-projects-img" class="nav-img"
-                        src="https://www.wolflair.com/wp-content/uploads/2017/01/placeholder.jpg" />
-                    <p class="tile-caption">Creative Projects</p>
-                </a>
-            </label>
-        </div>
+<!-- Main body of page -->
+<div id="Main-Wrapper" class="w3-border w3-container w3-border-black">
+    <!-- Intro -->
+    <section id="Main-Header">
+        <h1 class="w3-bottombar w3-border-black w3-left-align w3-text-deep-purple"style="font-weight: bold;">Welcome! My name is Evan :)</h1>
     </section>
 
-    <footer id="contact-info">
-        <!-- GitHub contact icon -->
-        <a id="github-link" href="https://github.com/Crabbicles" target="_blank">
-            <img class="contact-img" src="GitHub-Mark-Light-120px-plus.png">
-        </a>
-        <!-- FCC contact icon -->
-        <a id="fcc-link" href="https://www.freecodecamp.org/Crabbicles" target="_blank">
-            <img class="contact-img"
-                src="https://d33wubrfki0l68.cloudfront.net/2f7693e1933ac514c960f51ceae72c91c6716eb2/b2efd/img/fcc_primary_small.svg">
-        </a>
-        <!-- LinkedIn contact icon -->
-        <a id="linked-in-link" href="https://www.linkedin.com/in/evancrabb/" target="_blank">
-            <img class="contact-img"
-                src="https://bankimooncentre.org/wp-content/uploads/2020/05/LinkedIn-Icon-Square.png">
-        </a>
-    </footer>
+    <!-- About Section -->
+    <section id="About" class="w3-container w3-animate-top " style="width: 100%; margin-right: 1px;">
+            <!-- Text and stuff -->
+            <div id="About-text-holder" class=" w3-animate-zoom" style="height: auto;">
+                <h2 class="w3-bold w3-border-bottom w3-border-black" style="font-weight: bolder;">About Me:</h2>
+                <p style="font-size:larger; font-weight: 500;"> 
+                        I was born in Missisauga, Ontario, Canada 🇨🇦 but grew up in Barrie, Ontario, Canada 🇨🇦 . I have always had a passion for technology
+                    as well as nature and the outdoors. I code almost exclusively in Python but I am still learning and branching out!
+                </p>
+                <p style="font-weight: 500; font-size: larger;">
+                    I am currently attending Georgian College for Environmental Technician (ENTN) and I am seeking student co op positions
+                    in the environmental sector. Thank you for visiting my website!
+                </p>
+            </div>
+    </section>
 
+    <!-- Python Section -->
+    <section id="Python" class="w3-container w3-animate-zoom" style="padding-bottom: 3%;">
+    <h2 class="w3-bold w3-border-bottom w3-border-black" style="font-weight: bolder;">Python Projects</h2>
+        
+    <div id="projects-div" class="project-section-container">
+
+        <article id="proj1" class="project-tile">
+            <p class="tile-label-top">ARGO Data Visualization</p>
+            <a class="tile-img" href="" about="_blank">
+                <img class="tile-img" src="proj1-icon.png" alt="">
+            </a>
+            <p class="tile-desc">Very simple data visualization from Argo robots using Matplotlib Pychart and Numpy.</p>
+            <p class="tile-built-with"><b>Built With: </b>Python</p>
+            <a class="tile-link" target="_blank" href="https://github.com/Crabbicles/SimpleArgoDataVisualization">View on GitHub</a>
+        </article>
+    
+        <article id="proj2" class="project-tile">
+            <p class="tile-label-top">COOLEST PROJECT EVER </p>
+            <a class="tile-img" href="" about="_blank">
+                <img class="tile-img" src="https://www.wolflair.com/wp-content/uploads/2017/01/placeholder.jpg" alt="">
+            </a>
+            <p class="tile-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <p class="tile-built-with"><b>Built With: </b>Advanced Technologies</p>
+            <a class="tile-link" target="_blank" href="https://github.com/Crabbicles">View on GitHub</a>
+        </article>
+
+        <article id="proj3" class="project-tile">
+            <p class="tile-label-top">COOLEST PROJECT EVER 2</p>
+            <a class="tile-img" href="" about="_blank">
+                <img class="tile-img" src="https://www.wolflair.com/wp-content/uploads/2017/01/placeholder.jpg" alt="">
+            </a>
+            <p class="tile-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <p class="tile-built-with"><b>Built With: </b>Advanced Technologies</p>
+            <a class="tile-link" target="_blank" href="https://github.com/Crabbicles">View on GitHub</a>
+    </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="Skills" class="w3-container w3-animate-top">
+        <h2 class="w3-bold w3-border-bottom w3-border-black" style="font-weight: bolder;">My Skills</h2>
+        <p>Under Construction!</p>
+    </section>
+
+    <!-- Contact -->
+    <section id="Contact" class="w3-container w3-animate-top">
+        <h2 class="w3-bold w3-border-bottom w3-border-black" style="font-weight: bolder;">Contact Me</h2>
+        <a id='resume-button' class="w3-button w3-border w3-border-black" target="_blank" href="ENVR_UPDATED_RESUME.pdf">
+            <p>View my Resume</p>
+        </a>
+        <a href="https://github.com/Crabbicles" target="_blank" ><img src="GitHub-Mark-120px-plus.png" style="padding-left: 5%;"></a>
+    </section>
+
+</div>
+<!-- Footer (copyright and stuff) -->
+<div class="" style="height: 10px; background-color:black;"><span></span></div>
+<footer class="w3-container">
+    <p class="w3-right-align nomarg" style="margin-top: 0.8%;">Hand coded by Evan Crabb</p>
+    <p class="w3-right-align nomarg">&copy;2022-2023</p>
+</footer>
 </body>
-
-</html>
